@@ -35,7 +35,6 @@ function Ball(){
         // Add friction
         this.vel.mult(0.95);
         this.pos.add(this.vel);
-        print(this.vel);
     }
 
     this.display = function(){
