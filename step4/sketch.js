@@ -23,7 +23,9 @@ function draw(){
 function Ball(){
     this.pos = createVector(random(width), 0);
     this.vel = createVector(0, 0);
-    this.fill_color = random(255);
+    
+    // random color https://p5js.org/reference/#/p5/color
+    this.fill_color = color(random(0, 255), random(0,255), random(0,255), random(100, 255));
 
     this.move = function() {
         this.acc = createVector(0, 0);

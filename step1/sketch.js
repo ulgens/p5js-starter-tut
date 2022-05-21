@@ -5,8 +5,6 @@ function setup() {
     background(200);
     // Remove borders from shapes: https://p5js.org/reference/#/p5/stroke
     strokeWeight(0);
-    // Make all objects red: https://p5js.org/reference/#/p5/fill
-    fill('red');
 }
 
 function draw(){
@@ -14,6 +12,11 @@ function draw(){
 }
 
 function mouseClicked(){
-    // Create an ellipse with random coordinates: https://p5js.org/reference/#/p5/ellipse
+    // Create an ellipse with random coordinates https://p5js.org/reference/#/p5/ellipse
+    
+    // random color https://p5js.org/reference/#/p5/color & https://p5js.org/reference/#/p5/fill
+    let randomColor = color(random(0, 255), random(0,255), random(0,255), random(100, 255));
+    fill(randomColor);
+    noStroke();
     ellipse(random(width), random(height), 50, 50);
 }

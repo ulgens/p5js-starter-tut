@@ -8,6 +8,11 @@ function setup() {
     background(200);
     // Create new ball object
     ball = new Ball();
+
+    // random color https://p5js.org/reference/#/p5/color & https://p5js.org/reference/#/p5/fill
+    let randomColor = color(random(0, 255), random(0,255), random(0,255), random(100, 255));
+    fill(randomColor);
+    noStroke();
 }
 
 function draw(){
@@ -32,7 +37,6 @@ function Ball(){
     }
 
     this.display = function(){
-        fill(255);
         ellipse(this.pos.x, this.pos.y, 50, 50);
     }
 }
